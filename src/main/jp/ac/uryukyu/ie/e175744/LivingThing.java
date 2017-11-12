@@ -7,7 +7,7 @@ public class LivingThing {
     boolean dead;
 
     public LivingThing (String name, int maximumHP, int attack) {
-        this.name = name;
+        this.name= name;
         hitPoint = maximumHP;
         this.attack = attack;
         dead = false;
@@ -33,8 +33,10 @@ public class LivingThing {
     public void wounded(int damage){
         hitPoint -= damage;
         if( hitPoint < 0 ) {
-            dead = true;
+            dead=true;
             System.out.printf("%sは倒れた。\n", name);
         }
     }
+
+
 }
